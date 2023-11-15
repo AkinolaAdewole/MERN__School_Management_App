@@ -7,7 +7,7 @@ const errorHandler = (err, req, res, next) => {
 
     // Send the error response as JSON
     res.json({
-        status: 'error',
+        stack: process.env.NODE_ENV === 'PRODUCTION' ? null : err.stack,
         statusCode: statusCode,
         message: err.message || 'Internal Server Error'
     });
