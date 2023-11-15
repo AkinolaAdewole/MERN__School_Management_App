@@ -2,7 +2,11 @@ import mongoose from 'mongoose';
 
 const connectDB = async()=>{
     try {
-        const conn = await mongoose.connect(process.env.Mongo_URI)
+        await mongoose.connect(process.env.Mongo_URI, {
+            dbName: "Sch-Management",
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
     } catch (error) {
         console.error(error);
     }
