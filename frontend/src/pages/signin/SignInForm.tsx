@@ -19,7 +19,12 @@ const SignInForm = () => {
 
       const {email, password} = formData
 
-      const onChange=(e: React.ChangeEvent<HTMLInputElement>)=>{}
+      const onChange=(e: React.ChangeEvent<HTMLInputElement>)=>{
+        setFormData((prevState)=>({
+          ...prevState,
+          [e.target.name]: e.target.value
+        }))
+      }
 
       const handleSubmit=(e: React.FormEvent<HTMLFormElement>)=>{}
 
@@ -39,6 +44,12 @@ const SignInForm = () => {
                      <label htmlFor="">Password</label>
                      <input type="password" name='password' value={password} 
                       className='form-control my-2' onChange={onChange}/>
+
+                    <div className='form-group'>
+                         <button type='submit' className='btn btn-block'>
+                                Submit
+                           </button>
+                    </div>
                   </form>
                 </div>
               </div>

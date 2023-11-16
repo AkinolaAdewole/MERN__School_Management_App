@@ -70,7 +70,7 @@ const SignUp = () => {
                   <input type="checkbox" className=' my-2' />
 
                   <div>
-                    <button className='my-2'>SUBMIT</button>
+                    <button type='submit' className='my-2'>SUBMIT</button>
                   </div>
               </form>
             </div>
