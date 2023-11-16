@@ -1,9 +1,12 @@
 import React from 'react'
 import './landingpage.css'
+import NavLanding from './NavLanding'
 
 const LandingPage = () => {
   return (
-    <>LandingPage</>
+    <>
+      <NavLanding />
+    LandingPage</>
   )
 }
 
