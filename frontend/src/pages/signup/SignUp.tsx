@@ -24,7 +24,7 @@ const SignUp = () => {
 
               <form action="">
 
-                <label htmlFor="" className='form-control my-2'>Firstname</label>
+                <label htmlFor="">Firstname</label>
                 <input type="text" name='firstname' 
                   className='form-control my-2' 
                   value={formData.firstname} />
@@ -42,6 +42,7 @@ const SignUp = () => {
                   <label htmlFor="">Password</label>
                   <input type="password" name='password'
                     className='form-control my-2'/>
+                  <input type="checkbox" />
               </form>
             </div>
           </div>
