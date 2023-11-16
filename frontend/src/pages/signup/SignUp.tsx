@@ -1,4 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify'
+import {FaUser} from 'react-icons/fa'
+import Spinner from '../../components/Spinner';
 
 
 interface SignUpForm{
