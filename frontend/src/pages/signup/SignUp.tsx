@@ -8,7 +8,7 @@ interface SignUpForm{
     password: string
 }
 const SignUp = () => {
-    const [formData, setFormData]= useState({
+    const [formData, setFormData]= useState<SignUpForm>({
         firstname:'',
         lastname:'',
         email:'',
