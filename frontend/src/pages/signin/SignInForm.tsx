@@ -18,22 +18,27 @@ const SignInForm = () => {
       })
 
       const {email, password} = formData
+
+      const onChange=(e: React.ChangeEvent<HTMLInputElement>)=>{}
+
+      const handleSubmit=(e: React.FormEvent<HTMLFormElement>)=>{}
+
   return (
     <>
         <div>
             <div className='container-fluid'>
               <div className='row'>
                 <div className='shadow col-6 mx-auto'>
-                  <h1> <FaSignInAlt/> Login </h1>
+                  <h2> <FaSignInAlt/> Login </h2>
 
-                  <form action="">
+                  <form action="" onSubmit={handleSubmit}>
                     <label htmlFor="">Email</label>
-                    <input type="email" name='email'
-                     className='form-control my-2' />
+                    <input type="email" name='email' value={email}
+                     className='form-control my-2' onChange={onChange} />
 
                      <label htmlFor="">Password</label>
-                     <input type="password" name='password' 
-                      className='form-control my-2'/>
+                     <input type="password" name='password' value={password} 
+                      className='form-control my-2' onChange={onChange}/>
                   </form>
                 </div>
               </div>

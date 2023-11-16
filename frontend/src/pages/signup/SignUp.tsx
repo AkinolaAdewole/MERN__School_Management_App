@@ -43,6 +43,7 @@ const SignUp = () => {
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-6 shadow-sm mx-auto'>
+              <h2><FaUser/> Register</h2>
 
               <form action=""  onSubmit={handleSubmit}>
 
