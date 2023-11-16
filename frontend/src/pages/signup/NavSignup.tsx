@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const NavLanding = () => {
+const NavSignup = () => {
   return (
-    <>
+    <div>
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
                 <a className="navbar-brand">
@@ -26,9 +26,9 @@ const NavLanding = () => {
                 </div>
                 </div>
             </div>
-            </nav>
-    </>
+        </nav>
+    </div>
   )
 }
 
-export default NavLanding
+export default NavSignup
