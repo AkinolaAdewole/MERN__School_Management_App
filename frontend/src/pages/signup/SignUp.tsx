@@ -15,6 +15,23 @@ const SignUp = () => {
         password:''
     })
 
+    const { firstname, lastname, email, password} = formData
+
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFormData((prevState) => ({
+        ...prevState,
+        [e.target.name]: e.target.value,
+      }))
+    }
+
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      console.log(formData);
+      // Other form submission logic
+    };
+    
+
   return (
     <>
       <div>
@@ -22,27 +39,33 @@ const SignUp = () => {
           <div className='row'>
             <div className='col-6 shadow-sm mx-auto'>
 
-              <form action="">
+              <form action=""  onSubmit={handleSubmit}>
 
                 <label htmlFor="">Firstname</label>
                 <input type="text" name='firstname' 
                   className='form-control my-2' 
-                  value={formData.firstname} />
+                  value={firstname} onChange={onChange} />
 
                 <label htmlFor="">Lastname</label>
                 <input type="text" name='lastname' 
                   className='form-control my-2'
-                  value={formData.lastname}/>
+                  value={lastname} onChange={onChange}/>
 
                   <label htmlFor="">Email</label>
                   <input type="text" name='email' 
                     className='form-control my-2'
-                    value={formData.email}/>
+                    value={email} onChange={onChange}/>
 
                   <label htmlFor="">Password</label>
                   <input type="password" name='password'
-                    className='form-control my-2'/>
-                  <input type="checkbox" />
+                    className='form-control my-2'
+                    value={password} onChange={onChange}/>
+
+                  <input type="checkbox" className=' my-2' />
+
+                  <div>
+                    <button className='my-2'>SUBMIT</button>
+                  </div>
               </form>
             </div>
           </div>
