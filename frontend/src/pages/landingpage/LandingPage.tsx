@@ -6,7 +6,8 @@ const LandingPage = () => {
   return (
     <>
       <NavLanding />
-    LandingPage</>
+       LandingPage
+    </>
   )
 }
 
