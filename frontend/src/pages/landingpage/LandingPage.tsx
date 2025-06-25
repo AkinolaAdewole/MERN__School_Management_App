@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <>
       <NavLanding />
-       LandingPage
+       LandingPage ongoing
     </>
   )
 }
