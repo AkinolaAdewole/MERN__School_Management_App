@@ -6,7 +6,7 @@ const NavSignup = () => {
     <div>
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand">
+                <a className ="navbar-brand">
                     <Link to='/'>Navbar</Link> 
                 </a>
 
